@@ -20,7 +20,8 @@
             Lenguages y frameworks que conozco: HTML, Javascript, CSS, PHP, Bootstrap
             y ahora en proceso de aprender Laravel
         </p>
-
+        
+        <a href = "{{ route ('atras') }}" class = "btn btn-primary">Atras</a>
     
 
 @endsection
