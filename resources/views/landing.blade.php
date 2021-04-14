@@ -5,11 +5,13 @@
 
 <!-------------------------------------------- Falta agregar css para landing ------------------------------------------>
     <div class = "container">
-        <h2>Miembros del equipo</h2>
+        <h2>Miembros del equipo 7 </h2>
         <table>
             <tbody>
-               <a href = "{{ url('samuel') }}" class = "btn btn-primary">Samuel Gonzalez</a>
-               <a href = "{{ url('martin') }}" class = "btn btn-primary">Martin Noboa</a>
+               <a href = "{{ route ('samuel') }}" class = "btn btn-primary">Samuel Gonzalez</a>
+               &nbsp
+               <a href = "{{ route ('martin') }}" class = "btn btn-primary">Martin Noboa</a>
+               &nbsp
             </tbody> 
         </table>
     </div>
