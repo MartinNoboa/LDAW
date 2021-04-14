@@ -1,20 +1,18 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('plantilla')
 
-        <title>Laravel</title>
+@section('seccion')
 
-        <!-- CSS -->
-       <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}" >
 
-    </head>
-    <body>
-        <div class = "container">
-            <h2>Miembros del equipo</h2>
-        </div>
-        
-    </body>
-</html>
+<!-------------------------------------------- Falta agregar css para landing ------------------------------------------>
+    <div class = "container">
+        <h2>Miembros del equipo</h2>
+        <table>
+            <tbody>
+               <a href = "{{ url('samuel') }}" class = "btn btn-primary">Samuel Gonzalez</a>
+               <a href = "{{ url('martin') }}" class = "btn btn-primary">Martin Noboa</a>
+            </tbody> 
+        </table>
+    </div>
+
+@endsection
 

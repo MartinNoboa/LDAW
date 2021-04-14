@@ -14,11 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
-Route::get('/landing', function () {
-    return view('landing');
+
+Route::get('/samuel', function () {
+    return view('samuel');
+})->name('samuel');
+
+Route::get('/martin', function () {
+    return view('martin');
+})->name('martin');
+
+
+
+Route::get('/laravel', function () {
+    return view('welcome');
 });
 
 Auth::routes();
