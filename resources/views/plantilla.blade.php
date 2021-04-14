@@ -15,8 +15,8 @@
 
 
   <div class="container">
-        @yield('seccion')
-    </div>
+        @yield('seccion')  
+      </div>
 
 
     

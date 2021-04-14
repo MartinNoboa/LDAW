@@ -1,5 +1,5 @@
 
-
+@extends('plantilla')
 
 @section('seccion')
 
