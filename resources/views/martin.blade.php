@@ -3,7 +3,7 @@
 
 @section('seccion')
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row justify-content-center">
         
             <h3 class="row justify-content-center">Martin Noboa</h3>
@@ -12,21 +12,19 @@
             
 
         </div>
-    </div>
-        <div class = "container">
-        
+  
         
         <div class="row justify-content-center">
            <div class="col-sm">
             </div>
             <div class="col-sm">
-                <a href = "{{ route ('atras') }}" role = "button" class = "btn btn-outline-dark" >Atras</a>
+                <a id = "btnMartin" href = "{{ route ('atras') }}" role = "button" class = "btn btn-outline-dark mx-auto d-block" >Atras</a>
             </div>
             <div class="col-sm">
             </div>
         </div>
 
-        </div>
+    </div>
     
 
 @endsection
