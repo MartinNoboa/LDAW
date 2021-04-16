@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/ejemplo', function () {
     return view('landing');
 })->name('atras');
 
