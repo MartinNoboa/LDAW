@@ -26,8 +26,6 @@ Route::get('/martin', function () {
     return view('martin');
 })->name('martin');
 
-
-
 Route::get('/laravel', function () {
     return view('welcome');
 });
@@ -35,3 +33,7 @@ Route::get('/laravel', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/', function () {
+    return view('inicio');
+})->name('inicio');
