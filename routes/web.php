@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,18 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', function () {
     return view('inicio');
 })->name('inicio');
+
+/*
+* Funcion para probar si la conecxion es correcta
+*
+Route::get('test-db', function(){
+    try{
+       DB::connection() -> getPdo();
+        echo "Conectado correctamente a " . DB::connection() -> getDatabaseName();
+    }catch(\Exception $e){
+        die("Error" . $e);
+    }
+});
+*/
+    
+
