@@ -21,3 +21,8 @@ body{
     text-decoration: underline;
     cursor: default;
 }
+
+
+ion-icon {
+  --ionicon-stroke-width: 48px;
+}
