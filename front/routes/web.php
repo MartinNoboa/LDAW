@@ -27,10 +27,7 @@ Route::get('/martin', function () {
     return view('martin');
 })->name('martin');
 
-<<<<<<< HEAD:routes/web.php
-=======
 
->>>>>>> develop:front/routes/web.php
 Route::get('/laravel', function () {
     return view('welcome');
 });
