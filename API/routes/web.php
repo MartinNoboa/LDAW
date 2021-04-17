@@ -13,24 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/ejemplo', function () {
-    return view('landing');
-})->name('atras');
-
-
-Route::get('/samuel', function () {
-    return view('samuel');
-})->name('samuel');
-
-Route::get('/martin', function () {
-    return view('martin');
-})->name('martin');
-
-
-Route::get('/laravel', function () {
+Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
