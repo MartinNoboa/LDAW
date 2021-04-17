@@ -40,17 +40,6 @@ Route::get('/', function () {
     return view('inicio');
 })->name('inicio');
 
-/*
-* Funcion para probar si la conecxion es correcta
-*
-Route::get('test-db', function(){
-    try{
-       DB::connection() -> getPdo();
-        echo "Conectado correctamente a " . DB::connection() -> getDatabaseName();
-    }catch(\Exception $e){
-        die("Error" . $e);
-    }
-});
-*/
+
     
 
