@@ -11,18 +11,17 @@ class CreateRolesUsersTable extends Migration
      *
      * @return void
      */
-    public function up()
-    {
+    public function up(){
         Schema::create('roles_users', function (Blueprint $table) {
             $table->id();
             //llave foranea de la tabla permits
-            $table->foreignId('permit_id')
+            $table->foreignId('role_id')
                 ->nullable()
                 ->constrained()
                 ->onUpdate('cascade')
                 ->onDelete('set null');
             //llave foranea de la tabla roles
-            $table->foreignId('role_id')
+            $table->foreignId('user_id')
                 ->nullable()
                 ->constrained()
                 ->onUpdate('cascade')
