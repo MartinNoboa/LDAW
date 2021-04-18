@@ -20,6 +20,7 @@ Route::get('/', function () {
 /*
 * Funcion para probar si la conecxion es correcta
 *
+*/
 Route::get('test-db', function(){
     try{
        DB::connection() -> getPdo();
@@ -28,4 +29,3 @@ Route::get('test-db', function(){
         die("Error" . $e);
     }
 });
-*/
