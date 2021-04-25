@@ -32,12 +32,14 @@ Route::get('/laravel', function () {
     return view('signin');
 });
 
-Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/iniciarSesion', function () {
+    return view('signin');
+})->name('iniciarSesion');
 
 Route::get('/', function () {
-    return view('signin');
+    return view('inicio');
 })->name('inicio');
 
 
