@@ -1,28 +1,3 @@
-body{
-    background-color: white;
-    color: black;
-}
-
-#btnMartin{
-    margin-top:10px;
-}
-
-#body{
-    margin-top: 20%;
-}
-#bodyMartin{
-    margin-bottom: 5%;
-}
-
-#titulo{
-    padding: 20px;
-}
-#titulo:hover{
-    text-decoration: underline;
-    cursor: default;
-}
-
-
-ion-icon {
-  --ionicon-stroke-width: 48px;
+.main{
+    margin-top:2%;
 }
