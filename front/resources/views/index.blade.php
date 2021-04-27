@@ -2,7 +2,7 @@
 
 
 
-@section('nav')
+@include('partials.nav')
 
     <br><br>
     
@@ -157,5 +157,3 @@
     
     </div>
 
-
-@endsection

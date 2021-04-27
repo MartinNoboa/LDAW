@@ -14,24 +14,22 @@ use Illuminate\Support\Facades\DB;
 |
 */
 
-Route::get('/ejemplo', function () {
-    return view('landing');
+Route::get('/setup', function () {
+    return view('setupFramework.landing');
 })->name('atras');
 
 
 Route::get('/samuel', function () {
-    return view('samuel');
+    return view('setupFramework.samuel');
 })->name('samuel');
 
 Route::get('/martin', function () {
-    return view('martin');
+    return view('setupFramework.martin');
 })->name('martin');
 
 
-Route::get('/laravel', function () {
-    return view('signin');
-});
 
+    
 
 
 Route::get('/iniciarSesion', function () {
@@ -39,8 +37,8 @@ Route::get('/iniciarSesion', function () {
 })->name('iniciarSesion');
 
 Route::get('/', function () {
-    return view('inicio');
-})->name('inicio');
+    return view('index');
+})->name('landing');
 
 
     
