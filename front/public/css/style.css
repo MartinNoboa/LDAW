@@ -1,3 +1,29 @@
+
+/************************** General **************************/
+body{
+    font-family: Lato, Source Sans Pro;
+}
+
+
+/************************** Navbar **************************/
+/* Boton de login */
+#botonLogin{
+    color:black;
+    transform: scale();
+}
+#botonLogin:hover{
+    color:tomato;
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+#logo{
+    font-family: Lato Heavy;
+    padding-bottom: 5px;
+}
+
+/************************** index.blade.php **************************/
 .main{
     margin-top:2%;
 }
+

@@ -7,20 +7,40 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Custom CSS -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    
+    <!-- Link para Google fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro">
     <!-- Link para iconos fontawesome -->
     <script src="https://kit.fontawesome.com/76fa277871.js" crossorigin="anonymous"></script>
-      
     <title>@yield('title')</title>
   </head>
 
     
   <body>
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a id = "logo" class="navbar-brand" href="#"><i class="fas fa-ghost fa-x"></i> Gameshare</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <!-- Aqui van los links para un usuario registrado con sesion iniciada -->
+        <ul class="navbar-nav mr-auto">
+<!--           <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+ -->        </ul>
+        <span class="navbar-text">
+        <i id = "botonLogin" class="fas fa-user-circle fa-2x"></i>
+        </span>
+      </div>
+</nav>
+
   
     
-    @yield('nav')
+    <!-- @yield('nav') -->
+
     @yield('mainContent')
 
 
