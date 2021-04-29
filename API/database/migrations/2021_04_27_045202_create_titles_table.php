@@ -20,6 +20,12 @@ class CreateTitlesTable extends Migration
             $table->string('version')->nullable();
             $table->boolean('aprobado');
             $table->text('descripcion');
+            /* 
+            * Path para la imagen 
+            * Es nullable porque no se sabe que tan extenso sera el registro de un nuevo titulo (si incluira imagen o no)
+            * Habra una "stock" image en caso que sea nulo para que no haya problema al recuperar la informacion de la BD
+            */
+            $table->text('path')->nullable();
         });
     }
 

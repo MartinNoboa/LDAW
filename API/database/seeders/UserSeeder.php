@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
 //Importar la base de datos
 use Illuminate\Support\Facades\DB;
 
