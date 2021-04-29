@@ -6,6 +6,15 @@ body{
 
 
 /************************** Navbar **************************/
+/* Estructura de la navbar */
+#navbar{
+    padding-left: 2%;
+    padding-right: 5%;
+}
+/* logo del sitio */
+#logo{
+    font-family: Lato Heavy;
+}
 /* Boton de login */
 #botonLogin{
     color:black;
@@ -14,14 +23,20 @@ body{
 #botonLogin:hover{
     color:tomato;
     transform: scale(1.2);
-    transition: 1s;
+    transition: 0.5s;
+    cursor: pointer;
 }
-
-#logo{
-    font-family: Lato Heavy;
-    padding-bottom: 5px;
+/* Menu de login dropdown */ 
+.dropdown-menu{
+    border-radius: 20px;
 }
-
+.dropdown-item{
+    border-radius: 10px;
+}
+.dropdown-item:hover{
+    color:white !important;
+    background-color: tomato;
+}
 /************************** index.blade.php **************************/
 .main{
     margin-top:2%;
