@@ -20,7 +20,7 @@
   <body>
 
   <nav id = "navbar" class="navbar navbar-expand-lg navbar-light bg-light">
-    <a id = "logo" class="navbar-brand" href="#"><i class="fas fa-ghost fa-x"></i> Gameshare</a>
+    <a id = "logo" class="navbar-brand" href="{{route('landing')}}"><i class="fas fa-ghost fa-x"></i> Gameshare</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -37,11 +37,10 @@
             <i class="fas fa-user-circle fa-2x"></i>
           </span>
           <div class="dropdown-menu " aria-labelledby="botonLogin">
-            <a class="dropdown-item">Iniciar sesion</a>
-            <a class="dropdown-item">Registrarse</a>
+            <a class="dropdown-item" href="#" >Iniciar sesion</a>
+            <a class="dropdown-item" href= "{{ route('registrar') }}">Registrarse</a>
           </div>
       </div>
-      
 
     </div>
 </nav>

@@ -32,9 +32,9 @@ Route::get('/martin', function () {
     
 
 
-Route::get('/iniciarSesion', function () {
+Route::get('/registrar', function () {
     return view('auth.registrar');
-})->name('iniciarSesion');
+})->name('registrar');
 
 Route::get('/', function () {
     return view('index');

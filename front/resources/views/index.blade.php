@@ -42,7 +42,7 @@
         </div>
         <div class="col">
             <div class="card h-100">
-                <img src="{{ url('img/pac-man.jpg') }}" class="card-img-top" alt="..." style="width:250px; height:250px">
+                <img src="{{ url('img/spider-man.jpg') }}" class="card-img-top" alt="..." style="width:250px; height:250px">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
