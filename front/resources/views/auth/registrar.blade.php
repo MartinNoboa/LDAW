@@ -1,6 +1,6 @@
 @extends('plantillas/mainPlantilla')
 
-@section('nav')
+@section('mainContent')
 
 <br><br>
     <div class="container">

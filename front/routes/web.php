@@ -33,7 +33,7 @@ Route::get('/martin', function () {
 
 
 Route::get('/iniciarSesion', function () {
-    return view('signin');
+    return view('auth.registrar');
 })->name('iniciarSesion');
 
 Route::get('/', function () {
