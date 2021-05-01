@@ -10,6 +10,7 @@ body{
 #navbar{
     padding-left: 2%;
     padding-right: 5%;
+    margin-bottom:5%;
 }
 /* logo del sitio */
 #logo{
@@ -42,3 +43,9 @@ body{
     margin-top:2%;
 }
 
+footer{
+    margin-top:30px;
+    padding:20px;
+    text-align:center;
+    background-color: #f8f9fa;
+}

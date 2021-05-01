@@ -1,0 +1,28 @@
+.panelRow{
+    margin-left:50px;
+    margin-right:50px;
+}
+
+.panelCard{
+    padding:30px;
+    margin:20px;
+    text-align:center;
+    box-shadow: 5px 5px lightgray;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.accionPanel{
+    transform:scale();
+}
+.accionPanel:hover{
+    transform: scale(1.1);
+    color:tomato;
+}
+.linkPanel{
+    text-decoration: none;
+    color:black;
+}
+.linkPanel:hover{
+    text-decoration: none;
+}

@@ -40,6 +40,10 @@ Route::get('/', function () {
     return view('index');
 })->name('landing');
 
+Route::get('/panelAdministrativo', function () {
+    return view('admin.panel');
+})->name('panelAdmin');
+
 
     
 

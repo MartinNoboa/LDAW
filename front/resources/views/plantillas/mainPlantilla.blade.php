@@ -4,16 +4,21 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>@yield('title')</title>
 
+    <!---------------------------------- css ----------------------------------->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Custom CSS -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <!-- Link para Google fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro">
+    @stack('styles')
+
+
     <!-- Link para iconos fontawesome -->
     <script src="https://kit.fontawesome.com/76fa277871.js" crossorigin="anonymous"></script>
-    <title>@yield('title')</title>
   </head>
 
     
@@ -48,8 +53,14 @@
   
     
     <!-- @yield('nav') -->
+    <main class="container-fluid">
+      @yield('mainContent')
+    </main>
 
-    @yield('mainContent')
+
+    <footer class="container-fluid">
+      <p>LDAW Equipo 7 - Febrero . Junio 2021</p>
+    </footer>
 
 
     
