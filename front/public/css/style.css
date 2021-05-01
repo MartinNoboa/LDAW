@@ -23,7 +23,7 @@ body{
 }
 #botonLogin:hover{
     color:tomato;
-    transform: scale(1.2);
+    transform: scale(1.07);
     transition: 0.5s;
     cursor: pointer;
 }
