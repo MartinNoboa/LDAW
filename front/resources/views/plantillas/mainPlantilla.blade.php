@@ -37,7 +37,7 @@
             <i class="fas fa-user-circle fa-2x"></i>
           </span>
           <div class="dropdown-menu " aria-labelledby="botonLogin">
-            <a class="dropdown-item" href="#" >Iniciar sesion</a>
+            <a class="dropdown-item" href= "{{ route('iniciar') }}">Iniciar sesion</a>
             <a class="dropdown-item" href= "{{ route('registrar') }}">Registrarse</a>
           </div>
       </div>
