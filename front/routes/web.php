@@ -49,6 +49,10 @@ Route::get('/panel', function () {
     return view('panelGestion');
 })->name('panel');
 
+Route::get('/pendientes', function () {
+    return view('juegoPendiente');
+})->name('pendiente');
+
 
 Route::get('/', function () {
     return view('index');

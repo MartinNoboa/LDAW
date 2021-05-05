@@ -12,7 +12,7 @@
 <br><br>
     <div class="container">
         <div class ="row">
-            <a href= "#" type="submit" class="btn btn-secondary btn-lg btn-block">Juegos Pendientes</a>
+            <a href= "{{ route('pendiente') }}" type="submit" class="btn btn-secondary btn-lg btn-block">Juegos Pendientes</a>
         </div>
         <br><br>
         <div class ="row">
