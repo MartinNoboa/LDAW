@@ -36,6 +36,24 @@ Route::get('/registrar', function () {
     return view('auth.registrar');
 })->name('registrar');
 
+Route::get('/iniciar', function () {
+    return view('auth.iniciar');
+})->name('iniciar');
+
+
+Route::get('/newTitle', function () {
+    return view('newTitle');
+})->name('titulo');
+
+Route::get('/panel', function () {
+    return view('panelGestion');
+})->name('panel');
+
+Route::get('/pendientes', function () {
+    return view('juegoPendiente');
+})->name('pendiente');
+
+
 Route::get('/', function () {
     return view('index');
 })->name('landing');

@@ -5,8 +5,9 @@
 <br><br>
     <div class="container">
     <h4>Sign up</h4>
-    </div>
     <hr size="4px" color="black"> 
+    </div>
+    
 
     <div class="container">
     
