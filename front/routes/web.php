@@ -36,7 +36,7 @@ Route::get('/registrar', function () {
     return view('auth.registrar');
 })->name('registrar');
 
-Route::get('/iniciar', function () {
+Route::get('/iniciarSesion', function () {
     return view('auth.iniciar');
 })->name('iniciar');
 
