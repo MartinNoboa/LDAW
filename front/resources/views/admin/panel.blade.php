@@ -15,7 +15,7 @@
         <a class = "linkPanel" href="#"><h3 class = "accionPanel"><i class="fas fa-edit fa-x panelIcono"></i> Editar títulos</h3></a>
     </div>
     <div class="col-sm panelCard">
-    <a class = "linkPanel" href="#"><h3 class = "accionPanel"><i class="fas fa-check-circle fa-x panelIcono"></i> Aprobar títulos </h3></a>
+    <a class = "linkPanel" href="{{ route('pendiente') }}"><h3 class = "accionPanel"><i class="fas fa-check-circle fa-x panelIcono"></i> Aprobar títulos </h3></a>
     </div>
     <div class="col-sm panelCard">
     <a class = "linkPanel" href="#"><h3 class = "accionPanel"><i class="fas fa-user-cog fa-x panelIcono"></i> Mi cuenta</h3></a>

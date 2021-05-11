@@ -53,6 +53,10 @@ Route::get('/pendientes', function () {
     return view('juegoPendiente');
 })->name('pendiente');
 
+Route::get('/ofertas', function () {
+    return view('ofertas');
+})->name('ofertas');
+
 
 Route::get('/', function () {
     return view('index');
