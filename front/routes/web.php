@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CatalogoController;
 use Illuminate\Support\Facades\DB;
 
 /*
@@ -54,9 +55,7 @@ Route::get('/pendientes', function () {
 })->name('pendiente');
 
 
-Route::get('/', function () {
-    return view('index');
-})->name('landing');
+Route::get('/',[CatalogoController::class,'index'])->name('landing');
 
 Route::get('/panelAdministrativo', function () {
     return view('admin.panel');
