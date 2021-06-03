@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\TitleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +27,6 @@ Route::get('/samuel', function () {
 Route::get('/martin', function () {
     return view('setupFramework.martin');
 })->name('martin');
-
-
-
-    
 
 
 Route::get('/registrar', function () {
@@ -65,6 +62,10 @@ Route::get('/', function () {
 Route::get('/panelAdministrativo', function () {
     return view('admin.panel');
 })->name('panelAdmin');
+
+Route::post('/title/crear', [TitleController::class, 'create'] )->name('title.crear');
+
+
 
 
     

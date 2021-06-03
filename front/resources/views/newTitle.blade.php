@@ -13,37 +13,37 @@
         
             
 
-            <form action="" class="needs-validation was-validates" novalidate>
-            
+            <form action="{{ route('title.crear') }}" class="needs-validation was-validates" method="POST">
+                @csrf
                 <div class="row">
                     <div class="col-12">
                         <label for="" class="form-label">Nombre</label>
-                        <input type="text" class="form-control">
+                        <input name="nombre" type="text" class="form-control">
                     </div>
                 </div>
 
                 <div class="row">
                 <div class="col-sm">
                     <label for="" class="form-label">Edición</label>
-                    <input type="text" class="form-control">
+                    <input name="edicion" type="text" class="form-control">
                 </div>
 
                 <div class="col-sm">
                     <label for="" class="form-label">Versión</label>
-                    <input type="text" class="form-control">
+                    <input name="version" type="text" class="form-control">
                 </div>
                 </div>
                     <br>
                 
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Descripción</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <textarea name="descripcion" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
 
                 <br>
                 <div class="col-12">
                     
-                <input type="submit" class="btn btn-primary">
+                <button class="btn btn-primary btn-block" type="submit">Agregar</button>
                 </div>
 
                             
