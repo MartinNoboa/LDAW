@@ -25,6 +25,7 @@
                 <td><button type="button" class="btn btn-success btn-circle btn-lg"><i class="fas fa-check"></i></button></td>
                 <td><button type="button" class="btn btn-danger btn-circle btn-lg"><i class="fas fa-times"></i></button></td>
                 </tr>
+                
                 <tr>
                 <th scope="row">2</th>
                 <td>Spiderman</td>

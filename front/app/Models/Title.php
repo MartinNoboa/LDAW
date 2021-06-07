@@ -14,8 +14,22 @@ class Title
 
         //dd($title);
         $token = session('token');
-        $response=Http::withToken($token)->post(env('API_URL'). "title", ['employee'=>$title]);
-        //dd($response);
+        $response=Http::withToken($token)->post(env('API_URL'). "title", ['title'=>$title]);
+        dd($response);
+
         return $response->json();
+    }
+
+    public static function destroy($id){
+        
+        $token = session('token');
+
+        $response=Http::withToken($token)
+            ->delete(env('API_URL'). "title/$id");
+
+        $wasSuccessful = ($response->status() == 200);
+        $message = $response->json()['message'];
+
+        return array($wasSuccessful, $message);
     }
 }

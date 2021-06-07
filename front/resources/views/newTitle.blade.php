@@ -7,13 +7,20 @@
         <hr size="4px" color="black"> 
     </div>
     
+    @if(session('mensaje'))
+
+        <div class="alert alert-success">
+            {{ session('mensaje')}}
+        </div>
+
+    @endif
     
     <div class="container">
         
         
             
 
-            <form action="{{ route('title.crear') }}" class="needs-validation was-validates" method="POST">
+            <form action="{{ route('title.crear') }}" enctype="multipart/form-data" class="needs-validation was-validates" method="POST">
                 @csrf
                 <div class="row">
                     <div class="col-12">
@@ -40,8 +47,12 @@
                         <textarea name="descripcion" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
 
-                <br>
+                    <div>
+                        <label for="formFileSm" class="form-label">Small file input example</label>
+                        <input class="form-control form-control-sm" name="imagen" type="file">
+                    </div>
                 <div class="col-12">
+                <br>
                     
                 <button class="btn btn-primary btn-block" type="submit">Agregar</button>
                 </div>
