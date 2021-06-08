@@ -17,11 +17,11 @@ class Title
     return $response->json();
     }
 
-    public static function getAll(){
+    public static function aprobados(){
         $token = session('token');
         $response=Http::withToken($token)
-            ->get(env('API_URL'). 'title/list');
-        //dd($response);
+            ->get(env('API_URL'). 'title/aprobados');
+        //dd($response->body());
         return $response->json();
     }
 

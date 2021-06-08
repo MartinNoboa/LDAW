@@ -10,7 +10,7 @@
     <div class="container">
         @if(session('mensaje'))
 
-            <div class="alert alert-success">
+            <div class="alert alert-success alert-dismissible fade show">
                 {{ session('mensaje')}}
             </div>
 

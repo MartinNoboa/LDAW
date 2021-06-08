@@ -39,9 +39,11 @@ class TitleController extends Controller
         
         //dd($data);
         $result =  Title::newTitle($data);
+        $wasSuccessful = $result[0];
+        $message = $result[1];
 
         //dd($result);
-        return back()->with('mensaje', 'Titulo agregado!');
+        return back()->with('mensaje', $message);
 
     }
 
