@@ -17,6 +17,11 @@ class CreateGamesTable extends Migration
             $table->id();
             $table->string('nombre');
             $table->timestamps();
+            $table->foreignId('title_id')
+                ->nullable()
+                ->constrained()
+                ->onUpdate('cascade')
+                ->onDelete('set null');
             
         });
     }

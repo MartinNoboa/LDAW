@@ -20,7 +20,7 @@ class CreateRolesUsersTable extends Migration
                 ->constrained()
                 ->onUpdate('cascade')
                 ->onDelete('set null');
-            //llave foranea de la tabla roles
+            //llave foranea de la tabla usuarios
             $table->foreignId('user_id')
                 ->nullable()
                 ->constrained()

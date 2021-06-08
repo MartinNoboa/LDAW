@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGamesTitlesTable extends Migration
+class CreateGamesUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,22 +13,19 @@ class CreateGamesTitlesTable extends Migration
      */
     public function up()
     {
-        Schema::create('games_titles', function (Blueprint $table) {
+        Schema::create('games_users', function (Blueprint $table) {
             $table->id();
-            //declaracion de llaves foraneas
-            //llave foranea de la tabla juegos
-            $table->foreignId('game_id')
+            //llave foranea de la tabla usuarios
+            $table->foreignId('user_id')
                 ->nullable()
                 ->constrained()
                 ->onUpdate('cascade')
                 ->onDelete('set null');
-            //llave foranea de la tabla titulos
-            $table->foreignId('title_id')
+                $table->foreignId('game_id')
                 ->nullable()
                 ->constrained()
                 ->onUpdate('cascade')
                 ->onDelete('set null');
-            $table->timestamps();
         });
     }
 
@@ -39,6 +36,6 @@ class CreateGamesTitlesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('games_titles');
+        Schema::dropIfExists('games_users');
     }
 }

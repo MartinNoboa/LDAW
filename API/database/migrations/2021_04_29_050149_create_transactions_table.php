@@ -18,17 +18,15 @@ class CreateTransactionsTable extends Migration
             //declaracion de llaves foraneas
             //disponible es el juego por el que se oferta
             
-            $table->foreignId('disponible');
+            $table->foreignId('disponible')->nullable();
             //oferta es el juego que se ofrece
-            $table->foreignId('oferta');
+            $table->foreignId('oferta')->nullable();
 
             $table->foreign('disponible')->references('id')->on('games')
-            ->nullable()
             ->onUpdate('cascade')
             ->onDelete('set null');
             
             $table->foreign('oferta')->references('id')->on('games')
-            ->nullable()
             ->onUpdate('cascade')
             ->onDelete('set null');
             
