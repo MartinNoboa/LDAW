@@ -22,15 +22,15 @@ class CreateTransactionsTable extends Migration
             //oferta es el juego que se ofrece
             $table->foreignId('oferta');
 
-            $table->foreign('disponible')->references('id')->on('games')
-            ->nullable()
-            ->onUpdate('cascade')
-            ->onDelete('set null');
+            // $table->foreign('disponible')->references('id')->on('games')
+            // ->nullable()
+            // ->onUpdate('cascade')
+            // ->onDelete('set null');
             
-            $table->foreign('oferta')->references('id')->on('games')
-            ->nullable()
-            ->onUpdate('cascade')
-            ->onDelete('set null');
+            // $table->foreign('oferta')->references('id')->on('games')
+            // ->nullable()
+            // ->onUpdate('cascade')
+            // ->onDelete('set null');
             
 
             //llave foranea de la tabla estados
