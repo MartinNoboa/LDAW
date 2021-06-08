@@ -32,9 +32,15 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <!-- Aqui van los links para un usuario registrado con sesion iniciada -->
       <ul class="navbar-nav mr-auto">
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="#">Home</a>
-        </li> -->
+         <li class="nav-item">
+          <a class="nav-link" href="{{ route('panel') }}">Títulos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('newGame') }}">Crear juego</a>
+        </li> 
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('ofertas') }}">Ofertas</a>
+        </li> 
       </ul>
       <!-- Dropdown para inciar sesion, registrarse y logout en caso de sesion iniciada -->
         <div class="nav-item dropdown">

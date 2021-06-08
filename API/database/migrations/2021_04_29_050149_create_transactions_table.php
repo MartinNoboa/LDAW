@@ -26,9 +26,16 @@ class CreateTransactionsTable extends Migration
             ->onUpdate('cascade')
             ->onDelete('set null');
             
+            
+            $table->foreign('disponible')->references('id')->on('games')
+                ->nullable()
+                ->onUpdate('cascade')
+                ->onDelete('set null');
+            
             $table->foreign('oferta')->references('id')->on('games')
-            ->onUpdate('cascade')
-            ->onDelete('set null');
+             ->nullable()
+             ->onUpdate('cascade')
+             ->onDelete('set null');
             
 
             //llave foranea de la tabla estados

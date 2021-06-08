@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\TitleController;
+use App\Http\Controllers\GameController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,10 +30,6 @@ Route::get('/martin', function () {
 })->name('martin');
 
 
-
-    
-
-
 Route::get('/registrar', function () {
     return view('auth.registrar');
 })->name('registrar');
@@ -45,13 +43,14 @@ Route::get('/newTitle', function () {
     return view('newTitle');
 })->name('titulo');
 
+Route::get('/newGame', function () {
+    return view('newGame');
+})->name('newGame');
+
+
 Route::get('/panel', function () {
     return view('panelGestion');
 })->name('panel');
-
-Route::get('/pendientes', function () {
-    return view('juegoPendiente');
-})->name('pendiente');
 
 Route::get('/ofertas', function () {
     return view('ofertas');
@@ -65,6 +64,20 @@ Route::get('/', function () {
 Route::get('/panelAdministrativo', function () {
     return view('admin.panel');
 })->name('panelAdmin');
+
+Route::post('/title/crear', [TitleController::class, 'create'] )->name('title.crear');
+
+Route::get('/pendientes', [TitleController::class, 'index'])->name('title.index');
+
+Route::put('/title/update/{id}', [TitleController::class, 'aprobar'])->name('titles.aprobar');
+
+Route::delete('/title/eliminar/{id}', [TitleController::class, 'eliminar'])->name('titles.eliminar');
+
+
+
+Route::post('/game/crear', [GameController::class, 'create'] )->name('game.crear');
+
+
 
 
     
