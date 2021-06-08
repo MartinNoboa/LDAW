@@ -43,9 +43,7 @@ Route::get('/newTitle', function () {
     return view('newTitle');
 })->name('titulo');
 
-Route::get('/newGame', function () {
-    return view('newGame');
-})->name('newGame');
+
 
 
 Route::get('/panel', function () {
@@ -74,6 +72,11 @@ Route::put('/title/update/{id}', [TitleController::class, 'aprobar'])->name('tit
 Route::delete('/title/eliminar/{id}', [TitleController::class, 'eliminar'])->name('titles.eliminar');
 
 
+
+//Games
+
+
+Route::get('/newGame', [GameController::class, 'index'])->name('newGame');
 
 Route::post('/game/crear', [GameController::class, 'create'] )->name('game.crear');
 

@@ -15,11 +15,15 @@ class TitleController extends Controller
         return $titles;
     }
 
+    public function show(){
+
+        $titles = Title::where('aprobado', '1')->get();
+        return $titles;
+    }
+
   
     public function store(Request $request){
-        
-                
-        
+         
         $title = new Title; 
         $title->nombre = $request->nombre;
         $title->edicion = $request->edicion;
