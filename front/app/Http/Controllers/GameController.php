@@ -34,7 +34,14 @@ class GameController extends Controller
 
 
     public function create(Request $request){
-        
+
+        $request->validate([
+            'titulo' => 'required',
+            'consola' => 'required',
+            'condicion' => 'required'
+        ]);
+
+               
         $dtitle = $request ->input('titulo');
         //dd($dtitle);
         $sizetitle = strlen($dtitle);
