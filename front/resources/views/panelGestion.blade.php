@@ -12,7 +12,7 @@
 <br><br>
     <div class="container">
         <div class ="row">
-            <a href= "{{ route('title.index') }}" type="submit" class="btn btn-secondary btn-lg btn-block">Títulos Pendientes</a>
+            <a href= "{{ route('title.index') }}" type="submit" class="btn btn-primary btn-lg btn-block">Títulos Pendientes</a>
         </div>
         <br><br>
         <div class ="row">

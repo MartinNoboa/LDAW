@@ -33,7 +33,7 @@
       <!-- Aqui van los links para un usuario registrado con sesion iniciada -->
       <ul class="navbar-nav mr-auto">
          <li class="nav-item">
-          <a class="nav-link" href="{{ route('panel') }}">Títulos</a>
+          <a class="nav-link" href="{{ route('panel') }}">Panel Administrativo</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ route('panel.games') }}">Juegos</a>
