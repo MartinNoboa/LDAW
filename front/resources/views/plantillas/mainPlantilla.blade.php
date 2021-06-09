@@ -48,8 +48,12 @@
             <i class="fas fa-user-circle fa-2x"></i>
           </span>
           <div class="dropdown-menu " aria-labelledby="botonLogin">
-            <a class="dropdown-item" href= "{{ route('iniciar') }}">Iniciar sesion</a>
-            <a class="dropdown-item" href= "{{ route('registrar') }}">Registrarse</a>
+            @if (session()->has('sesionUsuario'))
+              <a class="dropdown-item" href= "{{ url('logout') }}">Cerrar sesión</a>
+            @else
+              <a class="dropdown-item" href= "{{ route('login') }}">Iniciar sesión</a>
+              <a class="dropdown-item" href= "{{ route('registrar') }}">Registrarse</a>
+          @endif
           </div>
       </div>
 

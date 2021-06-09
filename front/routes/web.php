@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\TitleController;
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,12 +20,9 @@ use App\Http\Controllers\GameController;
 Route::get('/setup', function () {
     return view('setupFramework.landing');
 })->name('atras');
-
-
 Route::get('/samuel', function () {
     return view('setupFramework.samuel');
 })->name('samuel');
-
 Route::get('/martin', function () {
     return view('setupFramework.martin');
 })->name('martin');
@@ -34,9 +32,15 @@ Route::get('/registrar', function () {
     return view('auth.registrar');
 })->name('registrar');
 
-Route::get('/iniciarSesion', function () {
-    return view('auth.iniciar');
-})->name('iniciar');
+
+/** 
+ * Rutas para el controlador de login y logout 
+*/
+Route::get('login',[AuthController::class,'login'])->middleware('sesionYaIniciada')->name('login');
+Route::post('check',[AuthController::class,'check'])->name("auth.check");
+Route::get('panel',[AuthController::class,'panel'])->middleware('sesionIniciada');
+Route::get('logout',[AuthController::class,'logout'])->name('logout');
+
 
 
 Route::get('/newTitle', function () {
