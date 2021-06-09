@@ -26,6 +26,16 @@ class TitleController extends Controller
 
     public function create(Request $request){
         ///dd($request->file('imagen'));
+
+        $request->validate([
+            'nombre' => 'required',
+            'edicion' => 'required',
+            'version' => 'required',
+            'descripcion' => 'required',
+            'imagen' => 'required'
+        ]);
+
+        //dd($request);
         
         $data=[
         'nombre' => $request ->input('nombre'),
