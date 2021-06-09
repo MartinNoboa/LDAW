@@ -25,6 +25,13 @@ class GameController extends Controller
 
     }
 
+    public function gameslist(){
+
+        $games=Games::list();
+
+        return view('listGames', compact('games'));
+    }
+
 
     public function create(Request $request){
         
@@ -84,6 +91,17 @@ class GameController extends Controller
         
         return back()->with('mensaje', $message);
        
+    }
+
+    public function eliminar($id){
+
+        //dd($id);        
+        $result = Games::destroy($id);
+
+        $wasSuccessful = $result[0];
+        $message = $result[1];
+
+        return back()->with('mensaje', $message);
     }
 
 

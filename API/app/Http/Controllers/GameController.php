@@ -29,5 +29,31 @@ class GameController extends Controller
         ], 200);
 
     }
+
+    public function index(){
+
+        $games=Games::all();
+        return $games;
+    }
+
+    public function destroy($id){
+        $game = Games::find($id);
+
+        if(!$game){
+            return response([
+                "id" => null,
+                "success" => false,
+                "message" => "No existe un titulo con el id $id."
+            ], 400);
+        }
+        
+        $game->delete();
+        
+        return response([
+            "id" => $id,
+            "success" => true,
+            "message" => "El título ha sido eliminado."
+        ], 200);
+    }
     
 }

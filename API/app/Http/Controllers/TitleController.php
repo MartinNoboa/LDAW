@@ -37,10 +37,10 @@ class TitleController extends Controller
         
 
         return response([
-            "id" => $id,
-            "worker" => $worker,
+            "id" => $title->id,
+            "worker" => $title,
             "success" => true,
-            "message" => "El empleado ha sido eliminado."
+            "message" => "El titulo ha sido agregado."
         ], 200);
 
     }
@@ -67,7 +67,7 @@ class TitleController extends Controller
         return response([
             "id" => $id,
             "success" => true,
-            "message" => "El título ha sido aprobado con éxito."
+            "message" => "El titulo ha sido aprobado con exito."
         ], 200);
     }
  

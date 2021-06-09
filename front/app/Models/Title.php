@@ -42,7 +42,7 @@ class Title
 
         $response=Http::withToken($token)
             ->put(env('API_URL'). "title/aprobar/$id");
-
+        //dd($response->body());
         
         $wasSuccessful = ($response->status() == 200);
         $message = $response->json()['message'];

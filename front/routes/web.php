@@ -74,13 +74,18 @@ Route::delete('/title/eliminar/{id}', [TitleController::class, 'eliminar'])->nam
 
 
 //Games
+Route::get('/panel/games', function () {
+    return view('panelGames');
+})->name('panel.games');
 
 
 Route::get('/newGame', [GameController::class, 'index'])->name('newGame');
 
+Route::get('/listGames', [GameController::class, 'gameslist'])->name('listGames');
+
 Route::post('/game/crear', [GameController::class, 'create'] )->name('game.crear');
 
-
+Route::delete('/game/eliminar/{id}', [GameController::class, 'eliminar'])->name('games.eliminar');
 
 
     

@@ -3,12 +3,10 @@
 @section('mainContent')
 
     <div class="container">
-    <h4>Títulos Pendientes</h4>
+    <h4>Mis Juegos</h4>
     <hr size="4px" color="black"> 
     </div>
 
-    @if($titles)
-    
     <div class="container">
         @if(session('mensaje'))
 
@@ -17,7 +15,9 @@
             </div>
 
         @endif
-        </div>
+    </div>
+
+    @if($games)
 
     <div class="container">
         <table class="table">
@@ -25,26 +25,18 @@
                 <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Nombre</th>
-                <th scope="col">Aprobar</th>
+                
                 <th scope="col">Eliminar</th>
                 </tr>
             </thead>
             <tbody>
-            @foreach($titles as $title)
+            @foreach($games as $game)
                 <tr>
                 
-                    <th>{{ $title['id']}}</th>
-                    <th>{{ $title['nombre']}}</th>
+                    <th>{{ $game['id']}}</th>
+                    <th>{{ $game['nombre']}}</th>
                     <th>
-                        <form action="{{ route('titles.aprobar', $title['id'])}}" method="POST" class="d-inline">
-                        @method('PUT')
-                        @csrf
-                        <button  type="submit" class="btn btn-success btn-circle btn-lg" ><i class="fas fa-check"></i></button>
-                        </form> 
-                    </th>
-                                       
-                    <th>
-                        <form action="{{ route('titles.eliminar', $title)}}" method="POST" class="d-inline">
+                        <form action="{{ route('games.eliminar', $game)}}" method="POST" class="d-inline">
                         @method('DELETE')
                         @csrf
                             <button type="submit" class="btn btn-danger btn-circle btn-lg" > <i class="fas fa-times"></i> </button>
@@ -58,15 +50,11 @@
 
         @else
         <div class="container">
-        <h5>No hay titulos pendientes registrados.</h5>
+        <h5>No hay juegos registrados.</h5>
         </div>
-        @endif
-        
+        @endif 
         
 
     </div>
-
-  
-
 
 @endsection

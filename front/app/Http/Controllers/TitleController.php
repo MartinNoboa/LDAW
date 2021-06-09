@@ -39,8 +39,8 @@ class TitleController extends Controller
         
         //dd($data);
         $result =  Title::newTitle($data);
-        $wasSuccessful = $result[0];
-        $message = $result[1];
+        $wasSuccessful = $result['success'];
+        $message = $result['message'];
 
         //dd($result);
         return back()->with('mensaje', $message);
@@ -50,13 +50,10 @@ class TitleController extends Controller
     public function aprobar($id){
         
         //dd($id);
-        
-
         $result = Title::aprobar($id);
         
-
-        $wasSuccessful = $result[0];
-        $message = $result[1];
+        $wasSuccessful = $result['0'];
+        $message = $result['1'];
 
         return back()->with('mensaje', $message);
     }

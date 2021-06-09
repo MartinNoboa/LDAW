@@ -36,7 +36,7 @@
           <a class="nav-link" href="{{ route('panel') }}">Títulos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route('newGame') }}">Crear juego</a>
+          <a class="nav-link" href="{{ route('panel.games') }}">Juegos</a>
         </li> 
         <li class="nav-item">
           <a class="nav-link" href="{{ route('ofertas') }}">Ofertas</a>
