@@ -12,7 +12,7 @@
 <br><br>
     <div class="container">
         <div class ="row">
-            <a href= "{{ route('listGames') }}" type="submit" class="btn btn-secondary btn-lg btn-block">Lista de juegos</a>
+            <a href= "{{ route('listGames') }}" type="submit" class="btn btn-primary btn-lg btn-block">Lista de juegos</a>
         </div>
         <br><br>
         <div class ="row">
