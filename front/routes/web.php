@@ -39,6 +39,7 @@ Route::get('/martin', function () {
 Route::get('/registrar', function () {
     return view('auth.registrar');
 })->name('registrar');
+Route::post('register',[AuthController::class,'register'])->name('register');
 Route::get('login',[AuthController::class,'login'])->middleware('sesionYaIniciada')->name('login');
 Route::post('check',[AuthController::class,'check'])->name("auth.check");
 Route::get('panel',[AuthController::class,'panel'])->middleware('sesionIniciada');
@@ -57,15 +58,16 @@ Route::middleware('can:viewPanel')->group(function() {
         return view('panelGestion');
     })->name('panel');
 });
+Route::get('/', function () {
+    return view('index');
+})->name('landing');
 
 
-Route::middleware('can:viewGame')->group(function() {
+Route::middleware('can:viewGames')->group(function() {
     Route::get('/ofertas', function () {
         return view('ofertas');
     })->name('ofertas');
-    Route::get('/', function () {
-        return view('index');
-    })->name('landing');
+    
     Route::post('/title/crear', [TitleController::class, 'create'] )->name('title.crear');
     Route::get('/pendientes', [TitleController::class, 'index'])->name('title.index');
     Route::put('/title/update/{id}', [TitleController::class, 'aprobar'])->name('titles.aprobar');

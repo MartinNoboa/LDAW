@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Models\User;
+use App\Models\UserRole;
 
 class AuthController extends Controller
 {
@@ -79,6 +80,50 @@ class AuthController extends Controller
             return redirect('login');
         }
     }
+
+    public function register(Request $request){
+        
+        $request->validate([
+            'nombre' => 'required',
+            'apellido' => 'required',
+            'email' => 'required',
+            'fecha' => 'required',
+            'password' => 'required',
+        ]);
+
+        $datosUsuario = request()->all();
+        $result = $this->create($datosUsuario);
+        $idUsuario = $result['id'];
+        //dd($idUsuario);
+        $dataRol = [
+            'role_id' => 3,
+            'user_id' => $idUsuario,
+            'activo' => 1,
+        ];
+        $userRol = $this->createRol($dataRol);
+
+        return redirect("/");
+    }
+
+    public function create(array $data)
+    {
+      return User::create([
+        'nombre' => $data['nombre'],
+        'apellido' => $data['apellido'],
+        'email' => $data['email'],
+        'password' => Hash::make($data['password']),
+        'fecha_nacimiento' => $data['fecha'],
+      ]);
+    }  
+
+    public function createRol(array $data)
+    {
+      return UserRole::create([
+        'role_id' => $data['role_id'],
+        'user_id' => $data['user_id'],
+        'activo' => $data['activo'],
+      ]);
+    }    
 
    
 }

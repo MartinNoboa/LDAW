@@ -29,7 +29,7 @@
 
             <div class="row">
                 <label for="" class="form-label">Contraseña</label>
-                <input type="password " class="form-control"id="password" name="password" value="{{old('password')}}">
+                <input type="password" class="form-control"id="password" name="password" value="{{old('password')}}">
                 <span class="text-danger"> @error('password') {{$message}} @enderror </span>
             </div>
             <br><br>
