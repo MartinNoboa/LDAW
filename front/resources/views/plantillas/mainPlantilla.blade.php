@@ -32,15 +32,19 @@
     <div class="collapse navbar-collapse" id="navbarText">
       <!-- Aqui van los links para un usuario registrado con sesion iniciada -->
       <ul class="navbar-nav mr-auto">
+      @can('viewPanel')
          <li class="nav-item">
           <a class="nav-link" href="{{ route('panel') }}">Panel Administrativo</a>
         </li>
+        @endcan
+        @can('viewGames')
         <li class="nav-item">
           <a class="nav-link" href="{{ route('panel.games') }}">Juegos</a>
         </li> 
         <li class="nav-item">
           <a class="nav-link" href="{{ route('ofertas') }}">Ofertas</a>
         </li> 
+        @endcan
       </ul>
       <!-- Dropdown para inciar sesion, registrarse y logout en caso de sesion iniciada -->
         <div class="nav-item dropdown">

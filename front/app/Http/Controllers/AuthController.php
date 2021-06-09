@@ -18,6 +18,7 @@ class AuthController extends Controller
         return view("auth.iniciar");
     }
 
+    
 
     /*
     * Funcion para validar datos de inicio de sesion
@@ -39,7 +40,17 @@ class AuthController extends Controller
         if($usuario){
             if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
                 $request->session()->put('sesionUsuario', $usuario->id);
-                return redirect()->intended('panel');
+                $role = DB::table('roles_users')
+                ->select('role_id')
+                ->where('user_id','=',$usuario->id)
+                ->first();
+
+                //dd($role);
+                if ($role->role_id == 1 | $role->role_id == 2){
+                    return redirect()->intended('panel');
+                }else{
+                    return redirect()->intended('/');
+                }
             }else{
                 return back()->with('fail','El usuario o la contraseña están incorrectos.');
             }
@@ -53,15 +64,21 @@ class AuthController extends Controller
 
 
     function panel(){
-        dd(auth()->user());
+        //dd(auth()->user());
         return view('panelGestion');
 
+    }
+    function home(){
+        return view('landing');
     }
 
     function logout(){
         if(session()->has('sesionUsuario')){
+            Auth::logout();
             session()->pull('sesionUsuario');
             return redirect('login');
         }
     }
+
+   
 }
