@@ -26,6 +26,7 @@ class CreateTitlesTable extends Migration
             * Habra una "stock" image en caso que sea nulo para que no haya problema al recuperar la informacion de la BD
             */
             $table->text('path')->nullable();
+            $table->timestamps();
         });
     }
 

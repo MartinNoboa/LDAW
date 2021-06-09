@@ -12,11 +12,15 @@
 <br><br>
     <div class="container">
         <div class ="row">
-            <a href= "{{ route('listGames') }}" type="submit" class="btn btn-primary btn-lg btn-block">Lista de juegos</a>
+            <a href= "{{ route('listGames') }}" type="submit" class="btn btn-primary btn-lg btn-block">Mis juegos</a>
         </div>
         <br><br>
         <div class ="row">
-            <a href= "{{ route('newGame') }}" type="submit" class="btn btn-primary btn-lg btn-block">Agregar Juegos</a>
+            <a href= "{{ route('newGame') }}" type="submit" class="btn btn-primary btn-lg btn-block">Agregar juegos</a>
+        </div>
+        <br><br>
+        <div class ="row">
+            <a href= "{{ route('sugerirTitulo') }}" type="submit" class="btn btn-primary btn-lg btn-block">Sugerir titulo</a>
         </div>
        
     </div>

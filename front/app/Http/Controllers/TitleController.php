@@ -82,4 +82,29 @@ class TitleController extends Controller
 
     }
 
+    public function sugerir(Request $request){
+
+        $request->validate([
+            'nombre' => 'required',
+            'version' => 'required',
+            'edicion' => 'required',
+            'descripcion' => 'required',
+        ]);
+
+        $datosUsuario = request()->all();
+        $result = $this->agregar($datosUsuario);
+
+        return redirect("/panel/games");
+    }
+
+    public function agregar(array $data){
+        return Title::create([
+            'nombre' => $data['nombre'],
+            'version' => $data['version'],
+            'edicion' => $data['edicion'],
+            'aprobado' => 0,
+            'descripcion' => $data['descripcion'],
+        ]);
+    }
+
 }

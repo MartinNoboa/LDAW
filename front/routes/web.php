@@ -32,6 +32,14 @@ Route::get('/martin', function () {
 })->name('martin');
 
 
+/**
+ * Ruta de la landing page
+ */
+Route::get('/', function () {
+    return view('index');
+})->name('landing');
+
+
 
 /** 
  * Rutas para login, logout y registro de usuarios
@@ -47,9 +55,9 @@ Route::get('logout',[AuthController::class,'logout'])->name('logout');
 
 
 
-Route::get('/newTitle', function () {
-    return view('newTitle');
-})->name('titulo');
+Route::get('/sugerirTitulo', function () {
+    return view('sugerirTitulo');
+})->name('sugerirTitulo');
 
 
 
@@ -57,10 +65,10 @@ Route::middleware('can:viewPanel')->group(function() {
     Route::get('/panel', function () {
         return view('panelGestion');
     })->name('panel');
+    Route::get('/newTitle', function () {
+    return view('newTitle');
+})->name('titulo');
 });
-Route::get('/', function () {
-    return view('index');
-})->name('landing');
 
 
 Route::middleware('can:viewGames')->group(function() {
@@ -68,6 +76,7 @@ Route::middleware('can:viewGames')->group(function() {
         return view('ofertas');
     })->name('ofertas');
     
+    Route::post('/title/sugerir', [TitleController::class, 'sugerir'] )->name('title.suggest');
     Route::post('/title/crear', [TitleController::class, 'create'] )->name('title.crear');
     Route::get('/pendientes', [TitleController::class, 'index'])->name('title.index');
     Route::put('/title/update/{id}', [TitleController::class, 'aprobar'])->name('titles.aprobar');

@@ -6,8 +6,17 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Http;
 
-class Title 
+class Title extends Model
 {
+    use HasFactory;
+    protected $fillable = [
+        'nombre',
+        'edicion',
+        'version',
+        'aprobado',
+        'descripcion',
+    ];
+
    
     public static function getTitles(){
         $token = session('token');
