@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\TitleController;
 use App\Http\Controllers\GameController;
+use App\Http\Controllers\LandingController;
 use App\Http\Controllers\AuthController;
 
 /*
@@ -35,9 +36,11 @@ Route::get('/martin', function () {
 /**
  * Ruta de la landing page
  */
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('index');
-})->name('landing');
+})->name('landing'); */
+Route::get('/', [LandingController::class, 'index'])->name('landing');
+
 
 
 
@@ -91,5 +94,4 @@ Route::middleware('can:viewGames')->group(function() {
     Route::delete('/game/eliminar/{id}', [GameController::class, 'eliminar'])->name('games.eliminar');
 });
 
-    
 
